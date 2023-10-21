@@ -1,10 +1,11 @@
 syntax = "proto3";
 
+import "person.proto";
+
 option java_multiple_files = true;
 option java_package = "com.github.gustavoflor.protobuf.model";
 
-message Person {
-  string name = 1;
-  int32 age = 2;
-  Person parent = 3;
+message Notification {
+  Person sender = 1;
+  Person receiver = 2;
 }
